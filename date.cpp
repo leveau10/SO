@@ -9,13 +9,20 @@ int main() {
 
 	tm *tm_struct = localtime(&curr_time); //puts the in a class to make the formatation easier.
 
-    std::cout << "Current day and time: " << std::endl;
-    std::cout << tm_struct->tm_year + 1900  << '-';   // year
-    std::cout << tm_struct->tm_mon  + 1 << '-';     // month
-    std::cout << tm_struct->tm_mday << ' ';        // day
-    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_hour << ':';         // hour
-    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_min << ':';         // minutes
-    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_sec << std::endl;   // seconds
+    const char* weekDay[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    int day = tm_struct->tm_wday;  //get the day of the week
+    const char* months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    int month = tm_struct->tm_mon;  //get the month
 
+    std::cout << "Current day and time: " << std::endl;
+    std::cout << weekDay[day] << ' ';   // day of the week
+    std::cout << tm_struct->tm_mday << ' '; //month day
+    std::cout << months[month] << ' ';     // month
+    std::cout << tm_struct->tm_year + 1900 << ' ';        // year
+    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_hour << ':';   // hour
+    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_min << ':';    // minutes
+    std::cout << std::setw(2) << std::setfill('0') << tm_struct->tm_sec <<  ' ';   // seconds
+    std::cout << tm_struct->tm_zone << std::endl;
+    
 	return 0;
 }
