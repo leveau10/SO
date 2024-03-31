@@ -16,7 +16,7 @@ Some implementations may be not exactly as those used on the linux shell, but pr
     The ```mkdir``` creates a new directory with full access[read, write, execute]. 
     Only one argument is accepted which is the name of the directory.
 - [rmdir](/rmdir.cpp)<br>
-    The ```rmdir``` removes a directory if it is empty and an error occurs if the directory is not empty or it doesn't exist.
+    The ```rmdir``` removes a directory if it is empty, and an error occurs if the directory is not empty or it doesn't exist.
     Only one argument is accepted which is the name of the directory.
 - [chmod](/chmod.cpp)<br>
     The ```chmod``` changes the permissions of a file or directory.
@@ -37,3 +37,35 @@ Some implementations may be not exactly as those used on the linux shell, but pr
     The ```rm``` removes a file
     Only one argument is accepcted with is the name of the file.
     If the file is a directory, it requires to be empty just like the ```rmdir``` syscall.
+- [mv](/mv.cpp)<br>
+    The ```mv``` renames or moves the file to other directory.
+    <br>
+    Example:
+    This is a directory and some operations will be done.
+    ```
+    Root
+        ├── test.txt
+        ├── mv.cpp
+        ├── Subdirectory
+        |   ├── test2.txt
+        |   └── mkdir.cpp
+        └── Subdirectory2
+            ├── test3.txt
+    ```
+    |Operation|Description|Command|
+    |:---:|---|:---:|
+    |Rename|It renames a file|```./mv test.txt testRenamed.txt```|
+    |Move|It moves testRenamed.txt to the Subdirectory |```./mv testRenamed.txt Subdirectory/testRenamed.txt```|
+    |Move and Rename|It moves back testRenamed.txt to root directory renaming it|```./mv Subdirectory/testRenamed testEnd.txt```|
+
+    Root directory after the operations:
+     ```
+    Root
+        ├── testEnd.txt
+        ├── mv.cpp
+        ├── Subdirectory
+        |   ├── test2.txt
+        |   └── mkdir.cpp
+        └── Subdirectory2
+            ├── test3.txt
+    ```
