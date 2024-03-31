@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[]) {
     if (argc != 2) {  //it checks if the number of args is correct. only one argument is accepted(name of the directory)
-        std::cerr << "Incorrect usage. To remove a directory, a name is required:: " << argv[0] << " <directory_name>\n";   
+        std::cerr << "Incorrect usage. To remove a directory, a name is required: " << argv[0] << " <directory_name>\n";   
         return 1;
     }
 

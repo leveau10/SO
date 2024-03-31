@@ -33,3 +33,7 @@ Some implementations may be not exactly as those used on the linux shell, but pr
     |---|No permissions |0|
     
     For example, if you want to change the <b>owner</b> to have full permissions, the <b>group owner</b> to read and execute, and the <b>others</b> to execute-only: ```./chmod <filename> 0751```
+- [rm](/rm.cpp)<br>
+    The ```rm``` removes a file
+    Only one argument is accepcted with is the name of the file.
+    If the file is a directory, it requires to be empty just like the ```rmdir``` syscall.
