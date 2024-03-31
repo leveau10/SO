@@ -11,6 +11,7 @@ int main() {
 
     const char* weekDay[7] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     int day = tm_struct->tm_wday;  //get the day of the week
+    
     const char* months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     int month = tm_struct->tm_mon;  //get the month
 
