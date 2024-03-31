@@ -39,8 +39,8 @@ Some implementations may be not exactly as those used on the linux shell, but pr
     If the file is a directory, it requires to be empty just like the ```rmdir``` syscall.
 - [mv](/mv.cpp)<br>
     The ```mv``` renames or moves the file to other directory.
-    <br>
-    Example:
+    <br><br>
+    Example:<br>
     This is a directory and some operations will be done.
     ```
     Root
