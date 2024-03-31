@@ -56,7 +56,7 @@ Some implementations may be not exactly as those used on the linux shell, but pr
     |:---:|---|:---:|
     |Rename|It renames a file|```./mv test.txt testRenamed.txt```|
     |Move|It moves testRenamed.txt to the Subdirectory |```./mv testRenamed.txt Subdirectory/testRenamed.txt```|
-    |Move and Rename|It moves back testRenamed.txt to root directory renaming it|```./mv Subdirectory/testRenamed testEnd.txt```|
+    |Move and Rename|It moves back testRenamed.txt to root directory renaming it|```./mv Subdirectory/testRenamed.txt testEnd.txt```|
 
     Root directory after the operations:
      ```
