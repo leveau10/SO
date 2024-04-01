@@ -5,7 +5,7 @@ Some implementations may be not exactly as those used on the linux shell, but pr
 
 ## Install requirements
 - Clone the repository.
-- A C++ compiler is required to run compile the programs. [GCC](https://gcc.gnu.org/) is recommmended.
+- A C++ compiler is required to compile the programs. [GCC](https://gcc.gnu.org/) is recommmended.
 
 ## System calls
 - [date](/date.cpp)<br>
