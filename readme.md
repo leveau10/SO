@@ -1,3 +1,9 @@
+# Shell implementation
+
+The file to the shell is this: [Shell](/shell/shell.cpp).
+
+The shell was implemented with C++ and has the basic commands of /bin/. Also, thw pwd and history internal commands were implemented.
+____________________________________________________
 # System call implementation
 This repository contains the study and implementation of some linux system calls.
 
