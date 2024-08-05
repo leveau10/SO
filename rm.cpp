@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     }
 
     const char* filename = argv[1]; //it gets the filename
-
+    
     if (remove(filename) != 0) {  //it removes the file and an error is thrown if fails.
         std::cerr << "Error removing file: " << filename << '\n';
         return 1;
